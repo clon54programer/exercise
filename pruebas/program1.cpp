@@ -34,6 +34,8 @@ int main(int argc, char const *argv[])
     double salay;
     int añosEnLaEmpresa;
     char puesto;
+    // caracteres especiales
+    setlocale(LC_ALL, "es_Es.UTF-8");
 
     cout << "ingrese su nombre\n";
     cin >> name;
@@ -44,11 +46,12 @@ int main(int argc, char const *argv[])
     cout << "ingrese cuantos años a trabajado en le empresa\n";
     cin >> añosEnLaEmpresa;
 
-    cout << "escriba p si tiene entre 0 hasta 2 años en la empresa,\n escriba j si tiene 2 entre y 5 años en la empresa,\n escroba e si tine mas de 5 años en la empresa  \n";
+    cout << "escriba p si tiene un puesto normal,\n escriba j si tiene un puesto de gerencia,\n escriba e si tiene un puesto ejecutivo \n";
     cin >> puesto;
 
     // creando objeto
     Personal myOBJ(name, salay, añosEnLaEmpresa, puesto);
+    cout << "nombre: \t" << name << "\n salario: \t " << salay << "\naños en la empresa: \t" << añosEnLaEmpresa << "\n puesto: \t" << puesto << endl;
 
     return 0;
 }
