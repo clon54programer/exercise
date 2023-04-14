@@ -1,0 +1,13 @@
+all: ejecutable
+ 
+clean:
+    rm *.o 
+ 
+archivo1.o :archivo1.c 
+    gcc  archivo1.c -c 
+ 
+archivo2.o :archivo2.c 
+    gcc  archivo2.c -c
+ 
+ejecutable: archivo1.o  archivo2.o
+    gcc archivo1.o archivo2.o -o ejecutable
