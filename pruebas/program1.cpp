@@ -17,6 +17,10 @@ public:
 
 Personal::Personal(string n, double s, int y, char p)
 {
+    name = n;
+    salary = s;
+    añosEnLaEmpresa = y;
+    puesto = p;
 }
 
 Personal::~Personal()
@@ -25,7 +29,7 @@ Personal::~Personal()
 
 int main(int argc, char const *argv[])
 {
-    // variables de interacion
+    //  variables de interacion
     string name;
     double salay;
     int añosEnLaEmpresa;
@@ -41,6 +45,10 @@ int main(int argc, char const *argv[])
     cin >> añosEnLaEmpresa;
 
     cout << "escriba p si tiene entre 0 hasta 2 años en la empresa,\n escriba j si tiene 2 entre y 5 años en la empresa,\n escroba e si tine mas de 5 años en la empresa  \n";
+    cin >> puesto;
+
+    // creando objeto
+    Personal myOBJ(name, salay, añosEnLaEmpresa, puesto);
 
     return 0;
 }
