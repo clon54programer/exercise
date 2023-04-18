@@ -1,4 +1,5 @@
 #include <iostream>
+#include "program.hh"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ public:
     ~Personal();
     int verificacion(char x);
 };
-
+// este es un contructyor en c++
 Personal::Personal(string n, double s, int y, char p)
 {
     name = n;
@@ -27,6 +28,7 @@ Personal::Personal(string n, double s, int y, char p)
 Personal::~Personal()
 {
 }
+// esta funcion se encarga de guardar el pusto que ocupa el empleado
 int Personal::verificacion(char x)
 {
     if (x == 'p')
@@ -46,9 +48,23 @@ int Personal::verificacion(char x)
         cout << "coloca la letra de forma incorrecta\n";
     }
 }
+
 void Jerequia(int y)
 {
+    if (y == 1)
+    {
+        cout << "usted es un empleado comun \n";
+    }
+    else if (y == 2)
+    {
+        cout << "usted tiene un pueste de gerencia en alguna sede de la empresa\n";
+    }
+    else if (y == 3)
+    {
+        cout << "usted hace parte de la junta directiva de la empresa\n";
+    }
 }
+
 int main(int argc, char const *argv[])
 {
     //  variables de interacion
@@ -65,7 +81,7 @@ int main(int argc, char const *argv[])
     cout << "ingrese su salario\n";
     cin >> salay;
 
-    cout << "ingrese cuantos años a trabajado en le empresa\n";
+    cout << "ingrese cuantos años a trabajado en la empresa\n";
     cin >> añosEnLaEmpresa;
 
     cout << "escriba p si tiene un puesto normal,\n escriba j si tiene un puesto de gerencia,\n escriba e si tiene un puesto ejecutivo \n";
@@ -78,5 +94,7 @@ int main(int argc, char const *argv[])
     int Verificacion = myOBJ.verificacion(puesto);
 
     Jerequia(Verificacion);
+
+    salary(salay);
     return 0;
 }
