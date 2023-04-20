@@ -8,3 +8,9 @@ no se rescriben las variables.
 ## Solucion
 
 >tocara usar un fichero o crear una base de datod sql.
+
+## intelsense
+
+> "C_Cpp.errorSquiggles": "enabled",
+
+hay que verificar que esta cosa esta asi para hablitar el subrayado de los errores
