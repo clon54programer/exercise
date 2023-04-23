@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
         else if (password != contraseña)
         {
             cout << "la contraseña es incorrecta \n";
-            // continue;
+            continue;
         }
 
         for (int i = 0; i <= 3; i++)
