@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 {
     cout << "ingrese su contraseña" << endl;
 
-    setlocale();
+    setlocale(LC_ALL, "es_ES.UTF-8");
     // varibles
     int intentos = 0;
     const string contraseña = "juan16";
@@ -25,12 +25,12 @@ int main(int argc, char const *argv[])
 
         if (password == contraseña)
         {
-            cout << "en horabuena";
+            cout << "en horabuena\n";
         }
         else if (password != contraseña)
         {
             cout << "la contraseña es incorrecta \n";
-            continue;
+            // continue;
         }
 
         for (int i = 0; i <= 3; i++)
@@ -40,12 +40,15 @@ int main(int argc, char const *argv[])
             if (nombre == name)
             {
                 cout << "nombre de usuario correcto\n";
+                break;
             }
             else
             {
                 cout << "nombre de usuario incorrecro\n";
             }
         }
+
+        break;
     }
     return 0;
 }
