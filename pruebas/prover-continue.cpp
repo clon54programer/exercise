@@ -8,6 +8,7 @@ int main(int argc, char const *argv[])
 {
     cout << "ingrese su contraseña" << endl;
 
+    setlocale();
     // varibles
     int intentos = 0;
     const string contraseña = "juan16";
@@ -25,7 +26,6 @@ int main(int argc, char const *argv[])
         if (password == contraseña)
         {
             cout << "en horabuena";
-            break;
         }
         else if (password != contraseña)
         {
