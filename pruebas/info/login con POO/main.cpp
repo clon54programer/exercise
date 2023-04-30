@@ -59,5 +59,7 @@ int main(int argc, char const *argv[])
     cout << "nombre " << nombre << "\t apellido " << apellido << endl;
     cout << "ID " << ID << " \n numero de telefono " << numeroDeTelefono << "\n correo " << correo << endl;
 
+    RegitryUsuary Usuario(nombre, apellido, correo, ID, numeroDeTelefono);
+
     return 0;
 }
