@@ -5,13 +5,18 @@ using namespace std;
 class RegitryUsuary
 {
 private:
-    /* data */
+    string name;
+    string lastName;
+    int ID;
+    int phoneNumber;
+    string email;
+
 public:
-    RegitryUsuary(/* args */);
+    RegitryUsuary(string x, string y, string email, int id, int number);
     ~RegitryUsuary();
 };
 
-RegitryUsuary::RegitryUsuary(/* args */)
+RegitryUsuary::RegitryUsuary(string x, string y, string email, int id, int number)
 {
 }
 
