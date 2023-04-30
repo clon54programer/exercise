@@ -8,15 +8,15 @@ private:
     string name;
     string lastName;
     int ID;
-    long phoneNumber;
+    long long phoneNumber;
     string correo;
 
 public:
-    RegitryUsuary(string x, string y, string email, int id, long number);
+    RegitryUsuary(string x, string y, string email, int id, long long number);
     ~RegitryUsuary();
 };
 
-RegitryUsuary::RegitryUsuary(string x, string y, string email, int id, long number)
+RegitryUsuary::RegitryUsuary(string x, string y, string email, int id, long long number)
 {
     name = x;
     lastName = y;
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
     string nombre;
     string apellido;
     int ID;
-    long numeroDeTelefono;
+    long long numeroDeTelefono;
     string correo;
 
     cout << "buenos dias señor usuario\n por favor deme unos datos para poder registrarse\n";
