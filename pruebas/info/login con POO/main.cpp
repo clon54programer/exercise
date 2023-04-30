@@ -65,7 +65,7 @@ int main(int argc, char const *argv[])
     ofstream userData("data.txt"); // creamos un archivo para guardar la informacion
 
     userData << "nombre del usuario: " << nombre << "\n apellido del usuario: " << apellido << "\n correo del usuario: " << correo << "\nId del usuario: "
-             << ID << "numero del usuario" << numeroDeTelefono;
+             << ID << "\nnumero del usuario" << numeroDeTelefono;
 
     return 0;
 }
