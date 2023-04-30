@@ -1,0 +1,4 @@
+nombre del usuario: juan
+ apellido del usuario: chamorro
+ correo del usuario: juandanilo2007@gmail.com
+Id del usuario: 1142917648numero del usuario3196486004

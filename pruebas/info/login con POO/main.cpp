@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -60,6 +61,11 @@ int main(int argc, char const *argv[])
     cout << "ID " << ID << " \n numero de telefono " << numeroDeTelefono << "\n correo " << correo << endl;
 
     RegitryUsuary Usuario(nombre, apellido, correo, ID, numeroDeTelefono);
+
+    ofstream userData("data.txt"); // creamos un archivo para guardar la informacion
+
+    userData << "nombre del usuario: " << nombre << "\n apellido del usuario: " << apellido << "\n correo del usuario: " << correo << "\nId del usuario: "
+             << ID << "numero del usuario" << numeroDeTelefono;
 
     return 0;
 }
