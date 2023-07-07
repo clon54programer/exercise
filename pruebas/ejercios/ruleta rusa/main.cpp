@@ -34,11 +34,6 @@ int main(int argc, char const *argv[])
             {
                 break;
             }
-            else if (InputNimber > 0)
-            {
-                cout << "trampa detetada" << endl;
-                throw(InputNimber);
-            }
         }
         catch (int error)
         {
