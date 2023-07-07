@@ -23,11 +23,13 @@ int main(int argc, char const *argv[])
         cout << "selecione un numero que este intervalo de " << numeroDeBalas << endl;
         cin >> InputNimber;
 
-        if (InputNimber < numeroDeBalas)
+        if (InputNimber > numeroDeBalas)
         {
             cout << "el numero ingresado supera el intervalo, por favor ingrese otro" << endl;
             continue;
         }
+        cout << "selecione un numero que este intervalo de " << numeroDeBalas << endl;
+        cin >> InputNimber;
     }
 
     double resultado = RuletaRusa(InputNimber, numeroDeBalas);
