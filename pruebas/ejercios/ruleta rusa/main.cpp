@@ -3,16 +3,18 @@
 
 using namespace std;
 
-double RuletaRusa(double x, int balas)
+// ruleta rusa terminada pero tiene un error, si el numero ingreasdo es igual al intervalo manda error.
+
+double RuletaRusa(int balas)
 {
-    x = rand() % balas;
+    double x = rand() % balas;
     return x;
 }
 
 int main(int argc, char const *argv[])
 {
     // variables
-    int InputNimber;
+    double InputNimber;
     int numeroDeBalas;
 
     cout << "deme el numerro de balas" << endl;
@@ -20,20 +22,28 @@ int main(int argc, char const *argv[])
 
     while (true)
     {
-        cout << "selecione un numero que este intervalo de " << numeroDeBalas << endl;
-        cin >> InputNimber;
-
-        if (InputNimber > numeroDeBalas)
+        try
         {
-            cout << "el numero ingresado supera el intervalo, por favor ingrese otro" << endl;
-            continue;
+            cout << "selecione un numero que este intervalo de " << numeroDeBalas << endl;
+            cin >> InputNimber;
+            if (InputNimber > numeroDeBalas)
+            {
+                throw(InputNimber);
+            }
+            else if (InputNimber < numeroDeBalas)
+            {
+                break;
+            }
         }
-        cout << "selecione un numero que este intervalo de " << numeroDeBalas << endl;
-        cin >> InputNimber;
-        break;
+        catch (int error)
+        {
+            cout << "ingrese otro numero" << endl;
+            cin >> InputNimber;
+            break;
+        }
     }
 
-    double resultado = RuletaRusa(InputNimber, numeroDeBalas);
+    double resultado = RuletaRusa(numeroDeBalas);
 
     cout << "resultado: " << resultado << endl;
     cout << InputNimber << endl;
