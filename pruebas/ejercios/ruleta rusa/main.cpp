@@ -30,11 +30,13 @@ int main(int argc, char const *argv[])
         }
         cout << "selecione un numero que este intervalo de " << numeroDeBalas << endl;
         cin >> InputNimber;
+        break;
     }
 
     double resultado = RuletaRusa(InputNimber, numeroDeBalas);
 
     cout << "resultado: " << resultado << endl;
+    cout << InputNimber << endl;
 
     if (resultado != InputNimber)
     {
