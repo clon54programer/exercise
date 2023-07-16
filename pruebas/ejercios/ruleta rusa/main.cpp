@@ -3,12 +3,12 @@
 
 using namespace std;
 
-// ruleta rusa terminada pero tiene un error, si el numero ingreasdo es igual al intervalo manda error.
+// ruleta rusa terminada pero tiene un error, si el numero ingresado es igual al intervalo manda error.
 
-double RuletaRusa(int balas)
+double RuletaRusa(int *balas)
 {
-    double x = rand() % balas;
-    return x;
+    *balas = rand() % *balas;
+    return *balas;
 }
 
 int main(int argc, char const *argv[])
@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
         }
     }
 
-    double resultado = RuletaRusa(numeroDeBalas);
+    double resultado = RuletaRusa(&numeroDeBalas);
 
     cout << "resultado: " << resultado << endl;
     cout << InputNimber << endl;
