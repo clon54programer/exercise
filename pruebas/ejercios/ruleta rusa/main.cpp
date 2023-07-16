@@ -11,6 +11,10 @@ double RuletaRusa(int *balas)
     return *balas;
 }
 
+bool AntiCheap()
+{
+}
+
 int main(int argc, char const *argv[])
 {
     // variables
